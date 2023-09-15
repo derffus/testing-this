@@ -1,0 +1,122 @@
+:root {
+  background-color: white;
+  color: white;
+  --background: hsl(219, 48%, 30%);
+  --content: #f3f3f3;
+  --buttonclicked:hsl(219, 48%, 33%);
+}
+
+#website {
+  font-family: "Lato", sans-serif;
+  font-family: "M PLUS 1p", sans-serif;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 18% 82%;
+  grid-template-rows: 5% 95%;
+  grid-template-areas:
+    "leftside navtop"
+    "leftside website"
+    "leftside website";
+}
+#left-side {
+  background-color: var(--background);
+  grid-area: leftside;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#home {
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
+  background-color: var(--background);
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  max-height: 25vh;
+}
+#home button {
+  background-color: hsl(0, 0%, 90%);
+  border-radius: 10px;
+  height: 65%;
+  width: 65%;
+}
+#home button:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 85%);
+}
+#navbar-top {
+  max-height: 20vh;
+  position: sticky;
+  top: 0;
+  background-color: var(--background);
+  border: 1px solid black;
+  border-left: none;
+  border-top: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#navbar-top button {
+  margin-left: 60px;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 95%);
+  width: 11%;
+  height: 50%;
+}
+
+#navbar-left {
+  position: sticky;
+  top: 25vh;
+  background-color: var(--background);
+  border-right: 2px solid black;
+  border-left: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#navbar-left div {
+  padding: 10px;
+  font-size: 1.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: var(--background);
+  border-bottom: 2px solid black;
+  height: 100px;
+}
+#navbar-left div:hover {
+  background-color: var(--buttonclicked);
+  cursor: pointer;
+}
+.klasa-div {
+  display: flex;
+  flex-direction: column;
+}
+.podstawa-i-rozszerzenie {
+  border-top:1px solid black;
+  padding: 5px !important;
+  width: 103% !important;
+  font-size: 0.8em !important;
+  min-height: 50% !important;
+}
+.podstawa{
+  border-bottom: none !important;
+}
+#content {
+  color: black;
+  grid-area: website;
+  background-color: var(--content);
+  padding: 100px;
+}
+#content::selection{
+  background-color: gray;
+}
